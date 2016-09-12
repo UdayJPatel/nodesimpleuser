@@ -1,49 +1,49 @@
 <h3>User Registration</h3>
-
 {{#if message}}
 	<div class="alert fade in {{#if error}}alert-danger{{else}}alert-success{{/if}}">
-		{{message}}
+		{{{message}}}
 	</div>
 {{/if}}
+<div class="col-md-4">
+	<form method="post" action="{{FormAction}}" data-toggle="validator" role="form">
 
-<form method="post" action="{{FormAction}}">
+		<div class="form-group">
+			<label for="firstName" class="control-label">First Name:</label>
+			<input type="text" class="form-control" id="firstName" name="firstName" value="{{body.firstName}}">
+		</div>
 
-	<div class="form-group">
-		<label for="firstname">First Name:</label>
-		<input type="text" class="form-control" id="firstname" name="firstname">
-	</div>
+		<div class="form-group">
+			<label for="lastName" class="control-label">Last Name:</label>
+			<input type="text" class="form-control" id="lastName" name="lastName" value="{{body.lastName}}">
+		</div>
 
-	<div class="form-group">
-		<label for="lastname">Last Name:</label>
-		<input type="text" class="form-control" id="lastname" name="lastname">
-	</div>
+		<div class="form-group">
+			<label for="email" class="control-label">Email address:</label>
+			<input type="email" class="form-control" id="email" name="email" data-error="Invalid email" value="{{body.email}}">
+		</div>
 
-	<div class="form-group">
-		<label for="email">Email address:</label>
-		<input type="email" class="form-control" id="email" name="email">
-	</div>
+		<div class="form-group">
+			<label for="password" class="control-label">Password:</label>
+			<input type="password" class="form-control" id="password" name="password" >
+		</div>
 
-	<div class="form-group">
-		<label for="pwd">Password:</label>
-		<input type="password" class="form-control" id="pwd" name="pwd">
-	</div>
+		<div class="form-group">
+			<label for="confirmPassword" class="control-label">Re-Password:</label>
+			<input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+		</div>
 
-	<div class="form-group">
-		<label for="repwd">Re-Password:</label>
-		<input type="password" class="form-control" id="repwd" name="repwd">
-	</div>
+		<div class="form-group">
+			<input type="hidden" class="form-control" id="process" name="process" value="1">
+		</div>
 
-	<div class="form-group">
-		<input type="hidden" class="form-control" id="process" name="process" value="1">
-	</div>
+		{{!-- Removing the concept of debug. Instead implelement dump like coldfusion look at /helpers/dump.js --}}
+		{{!-- {{#if debug }}
+		{{#each query}}
+			<input type="hidden" name="debug" id="debug" value="1">
+			<div>{{@key}} : {{this}}</div>
+		{{/each}}
+		{{/if}} --}}
 
-	{{!-- Removing the concept of debug. Instead implelement dump like coldfusion look at /helpers/dump.js --}}
-	{{!-- {{#if debug }}
-	{{#each query}}
-		<input type="hidden" name="debug" id="debug" value="1">
-		<div>{{@key}} : {{this}}</div>
-	{{/each}}
-	{{/if}} --}}
-
-	<button type="submit" class="btn btn-default">Submit</button>
-</form>
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</div>
