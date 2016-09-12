@@ -1,0 +1,49 @@
+body {
+  padding: 5px;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+/*
+.dumpObject, .dumpArray{font-size: xx-small;font-family: verdana,arial,helvetica,sans-serif;}
+.dumpObject td,.dumpArray td{padding:3px;}
+.dumpObject th,.dumpArray th{padding:5px;}
+.dumpObject .key,.dumpArray .key{cursor: pointer;}
+.dumpObject th{
+	background-color: #4444CC;
+	border:2px solid #0000CC;
+	color:#ffffff;
+}
+
+.dumpObject td{
+	border:2px solid #0000CC;
+}
+
+.dumpObject .key{
+	background-color: #CCDDFF;
+}
+
+.dumpArray{}
+
+.dumpArray th{
+	background-color: #009900;
+	border:2px solid #006600;
+	color:#ffffff;
+}
+
+.dumpArray td{
+	border:2px solid #006600;
+}
+
+.dumpArray .key{
+	background-color: #CCFFCC;
+}
+*/
+
+.red {color:red;}
+/*.key {cursor: pointer; vertical-align: top;}*/
+.italics {font-style: italic;}
+.bgdarkblue {background-color: #0000CC;}
+.bgdarkgreen {background-color: #006600;}
