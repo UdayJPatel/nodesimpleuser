@@ -39,6 +39,7 @@ jspm_packages
 #ignore backup folder
 *backup*
 *bkup*
+*.DS_Store
 
 #ignore test folder
 test/
