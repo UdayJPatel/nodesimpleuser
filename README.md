@@ -1,2 +1,2 @@
 # nodesimpleuser
-This is my first project on GitHub
+A simple Node app that adds users and list them
